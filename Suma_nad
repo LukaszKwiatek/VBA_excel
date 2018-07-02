@@ -1,0 +1,11 @@
+Sub AutoSumDown()
+    Dim OrigCell As Range
+    Dim FirstCell As Range
+    Dim LastCell As Range
+    Set OrigCell = ActiveCell
+    Set FirstCell = ActiveCell.Offset(1, 0)
+    Set LastCell = FirstCell.End(xlDown)
+    MyFormula = "=SUM(" & FirstCell.Address & ":" & LastCell.Address & ")"
+    OrigCell.Formula = MyFormula
+End Sub
+dim Autosuma dla komórki ponad danymi - źródło MrExcel
